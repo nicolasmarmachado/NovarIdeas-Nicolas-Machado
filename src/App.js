@@ -6,9 +6,9 @@ import {BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
 import Cart from "./components/Cart";
 import CartContextProvider from "./components/CartContext";
-// import Form from "./components/Form";
-// import CreateOrder from "./components/CreateOrder";
-import CheckOut from "./components/CheckOut";
+import CreateOrder from "./components/CreateOrder";
+// import CheckOut from "./components/CheckOut";
+import Form from "./components/Form";
 
 export default function App() {
 
@@ -18,8 +18,8 @@ export default function App() {
         <BrowserRouter>
           <NavBar />
           <Routes>
-            {/* <Route exact path="/create" element={<CreateOrder/>} /> */}
-            <Route exact path="/checkout" element={<CheckOut/>} />
+            <Route exact path="/order" element={<CreateOrder/>} />
+            <Route exact path="/form" element={<Form/>} />
             <Route exact path="/" element={<ItemListContainer />} />
             <Route exact path="/categorias/:id"element={<ItemListContainer />} />
             <Route exact path="/item/:id" element={<ItemDetailContainer />} />

@@ -15,7 +15,7 @@ export default function Cart() {
     <>
       {cart.length > 0
         ? cart.map(product => (
-            <div>
+            <div key={product.id}>
               <Card>
                 <Card.Body>
                   <img src={product.imagen} alt="imagen" className="cardCarrito" />
@@ -50,7 +50,7 @@ export default function Cart() {
       <br />
       <div>
         {/* <button onClick={handleClickClear} className="botonFinalizar">FINALIZAR COMPRA</button> */}
-        <Link to="/checkout" className="botonFinalizar">Finalizar compra</Link>
+        <Link to="/form" className="botonFinalizar">Finalizar compra</Link>
         {/* <button onClick={handleClickClear} className="botonFinalizar">
           
         </button> */}

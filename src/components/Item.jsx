@@ -7,7 +7,7 @@ export default function Item({prod}) {
  
   return (
     <>
-      <div className='card'>
+      <div className='card' >
         <Card style={{width:"23em"}} key={prod.id}>
           <Card.Body >
             <Card.Title style={{width:"16em"}}>{prod.titulo}</Card.Title>

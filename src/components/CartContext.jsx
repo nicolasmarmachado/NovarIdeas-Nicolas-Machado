@@ -21,7 +21,7 @@ const CartContextProvider = ({ children }) => {
   };
 
   const clear = () => setCart([]);
-
+ 
   const buyAll = () => setCart([]);
 
   const cantidadTotal=cart.reduce((total, product)=>total+product.cantidad, 0);
