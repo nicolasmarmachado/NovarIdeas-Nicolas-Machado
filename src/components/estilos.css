@@ -125,6 +125,19 @@ body{
     max-width: 100%;
 }
 
+.checkout{
+    height: 100px;
+    width: auto;  
+    color: #333;  
+    line-height: 100px;
+    text-align: center;
+    vertical-align: middle;
+}
+.checkout p{
+    font-size: 40px;
+}
+
+
 .botonDetalle{
     font-size: 20px;
     text-decoration: none;
