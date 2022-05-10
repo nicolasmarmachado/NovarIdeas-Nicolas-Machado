@@ -2,7 +2,6 @@ import React, { useContext } from "react";
 import { Cartcontext } from "./CartContext";
 import "./estilos.css";
 
-
 export default function CartWidget() {
   const {cantidadTotal }= useContext(Cartcontext);
 
