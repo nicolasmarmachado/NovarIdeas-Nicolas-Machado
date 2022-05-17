@@ -28,6 +28,8 @@ export default function ItemListContainer() {
 
   return (
     <>
+      <h3 className="bienvenido">Bienvenidos a NOVAR Ideas. <br />
+        Elija su producto de la tienda aquí abajo</h3>
       <ItemList products={products}  />
     </>
   );

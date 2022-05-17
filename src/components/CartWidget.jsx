@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import { Link } from "react-router-dom";
 import { Cartcontext } from "./CartContext";
 import "./estilos.css";
 
@@ -7,9 +8,9 @@ export default function CartWidget() {
 
   return (
     <>
-      <div className="cartwidget"> 
-        <b>( {cantidadTotal} )</b>
-        <img src="cart3.svg" alt="cartwidget" className="carrito" />
+      <div  className="cartwidget"> 
+          ({cantidadTotal})
+        <Link to="/cart"> <img as={Link} to="/cart" src="cart3.svg" alt="cartwidget" className="carrito" /></Link>
       </div>
     </>
   );

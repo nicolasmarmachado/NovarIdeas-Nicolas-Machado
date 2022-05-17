@@ -13,43 +13,53 @@ export default function Cart() {
   
   return (
     <>
-      {cart.length > 0
-        ? cart.map(product => (
-            <div key={product.id}>
-              <Card>
-                <Card.Body>
-                  <img src={product.imagen} alt="imagen" className="cardCarrito" />
-                  <br />
-                  <b>{product.titulo}</b> <br />
-                  $ {product.precio} <br />
-                  {product.cantidad} <br />
-                  <button onClick={() => removeItem(product.id)}>
-                    Remover este item
-                  </button>
-                </Card.Body>
-              </Card>
-            </div>
-            
-          ))
-        : "El carrito está vacio"}
-      <br />
-      <div>
-          Cantidad de items: <b>{cantidadTotal}</b> <br/>
-          Importe total a pagar: $ <b>{valorTotal}</b> <br/>
-      </div>
-      <br/>
-      <div>
-        <button onClick={handleClickClear}>Remover todos los items</button>
-      </div>
-      <br />
-      <div>
-        <Link to="/" className="botonCart">
-          Volver a TIENDA
-        </Link>
-      </div>
-      <br />
-      <div>
-        <Link to="/form" className="botonFinalizar">Finalizar compra</Link>          
+      <div className='resumenCarrito'>
+        {cart.length > 0
+          ? cart.map((product) => (
+              <div key={product.id}>
+                <Card>
+                  <Card.Body>
+                    <img
+                      src={product.imagen}
+                      alt="imagen"
+                      className="cardCarrito"
+                    />
+                    <br />
+                    <b>{product.titulo}</b> <br />$ {product.precio} <br />
+                    {product.cantidad} <br />
+                    <button onClick={() => removeItem(product.id)}>
+                      Remover este item
+                    </button>
+                  </Card.Body>
+                </Card>
+              </div>
+            ))
+          : "El carrito está vacio"}
+        <br />
+        <div>
+          Cantidad de items: <b>{cantidadTotal}</b> <br />
+          Importe total a pagar: $ <b>{valorTotal}</b> <br />
+        </div>
+        <br />
+        <div>
+          <button onClick={handleClickClear}>Remover todos los items</button>
+        </div>
+        <br />
+        <div>
+          <Link to="/" className="botonCart">
+            Volver a TIENDA
+          </Link>
+        </div>
+        <br />
+        <div>
+          {cantidadTotal !== 0 ? (
+            <Link to="/formcheckout" className="botonFinalizar">
+              Finalizar compra
+            </Link>
+          ) : (
+            "No hay items agregados en el carrito"
+          )}
+        </div>
       </div>
     </>
   );}

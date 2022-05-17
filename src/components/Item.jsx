@@ -7,7 +7,7 @@ export default function Item({prod}) {
  
   return (
     <>
-      <div className='card' >
+    
         <Card style={{width:"23em"}} key={prod.id}>
           <Card.Body >
             <Card.Title style={{width:"16em"}}>{prod.titulo}</Card.Title>
@@ -17,7 +17,10 @@ export default function Item({prod}) {
             <Link to={`/item/${prod.id}`} className='botonDetalle'>Ver detalle </Link>
           </Card.Body>
         </Card>
-      </div>
+      
     </>
   );
 }
+
+
+

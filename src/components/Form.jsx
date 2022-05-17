@@ -6,12 +6,12 @@ import {
 	getDoc,
 	doc,
 } from 'firebase/firestore';
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Cartcontext } from './CartContext';
 import "./estilos.css";
 
 export default function Form() {
-	const { cart, valorTotal } = useContext(Cartcontext);
+	const { cart, valorTotal, clear } = useContext(Cartcontext);
 	const [orderId, setOrderId] = useState('');
 	const [isLoading, setIsLoading] = useState(false);
 	const [order, setOrder] = useState(null);
@@ -39,6 +39,7 @@ export default function Form() {
 			getDoc(orderRef).then((res) => {
 				setOrder(res);
 				setOrderId(res.id);
+        clear();
 				setIsLoading(false);
 			});
 		});
@@ -54,67 +55,79 @@ export default function Form() {
         <>
           <div className="checkout">
             <b>
-              Gracias por su compra!! Esperamos que haya sido placentero...<br />
-              Su orden de compra ha sido generada con el siguiente ID: <p>{orderId}.</p><br />
-              Utilicelo para realizar el pago o para futuros reclamos. Recuerde que cuenta con 30 días para hacerlo.
+              Gracias por su compra!! Esperamos que haya sido placentero...
+              <br />
+              Su orden de compra ha sido generada con el siguiente ID:
+              <p>{orderId}.</p><br />
+              Utilicelo para realizar el pago o para futuros reclamos. Recuerde
+              que cuenta con 30 días para hacerlo.
             </b>
           </div>
         </>
       ) : (
         <>
-          <div>
+          <form className="formulario" onSubmit={() => sendOrder()}>
             <div>
-              <label for="name">Nombre: </label>
+              <label for="name">Nombre: </label> <br/>
               <input
                 placeholder="Escriba su nombre"
-                type={"text"}
+                type="text"
                 value={name}
                 id="name"
                 onChange={(e) => {
                   setName(e.target.value);
                 }}
+                required
               />
             </div>
             <div>
-              <label for="surname">Apellido: </label>
+              <label for="surname">Apellido: </label><br/>
               <input
                 placeholder="Escriba su apellido"
-                type={"text"}
+                type="text"
                 value={surname}
                 id="surname"
                 onChange={(e) => {
                   setSurname(e.target.value);
                 }}
+                required
               />
             </div>
             <div>
-              <label for="email">Email: </label>
+              <label for="email">Email: </label><br/>
               <input
                 placeholder="Escriba su email"
-                type={"text"}
+                type="email"
                 value={email}
                 id="email"
                 onChange={(e) => {
                   setEmail(e.target.value);
                 }}
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                required
               />
             </div>
             <div>
-              <label for="phone">Teléfono: </label>
+              <label for="phone">Teléfono: </label><br/>
               <input
                 placeholder="Escriba su teléfono"
-                type={"text"}
+                type="tel"
                 value={phone}
                 id="phone"
                 onChange={(e) => {
                   setPhone(e.target.value);
                 }}
+                pattern="[0-9]*"
+                required
               />
             </div>
-          </div>
-          <button type="submit" onClick={() => sendOrder()}>
-            Submit
-          </button>
+            <button
+              className="submit"
+              type="submit"
+            >
+              Submit
+            </button>
+          </form>
         </>
       )}
     </>

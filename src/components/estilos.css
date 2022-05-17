@@ -1,68 +1,21 @@
-body{
-    background: radial-gradient(circle, blue);
-}
-
-.logo{
-    width: 70px;
-    float: left;
-    align-items: center;
-}
-
-.navbar{
-    background-color: hsla(120, 100%, 30%, 0.3);
-}
-
-.navbar div a{
-    text-decoration: none;
-    font-size: 50px;
-    color: black;
-}
-
-.items{
+.agregar{
     display: flex;
     justify-content: center;
     align-items: center;
-    list-style-type: none;
+    margin-bottom: 10px;
 }
 
-.items li a{
-    font-size: 50px;
-    font-family: 'Hurricane', cursive;
-    margin: 10px;
-    display: inline-block;
-    align-items: center;
-    text-decoration: none;  
-    color: #ff3434;
+.agregar button{
+    border-radius: 100px;
+    font-size: 20px;
+    background-color: #198754;
+    color: white;
 }
 
-.items li a:active{
-    background-color: hsla(120, 100%, 30%, 0.1);    
-}
-
-.categorias{
-    display: flex;
-    justify-content: center;
-    list-style-type: none;
-    font-size: 30px;
-    font-family: 'Hurricane', cursive;
-    align-items: center;
-}
-
-.categorias li a{
-    text-decoration: none; 
-    color: #ff3434;
-    margin: 10px;
-    font-size: 50px;
-}
-
-.categorias li a:active{
-    background-color: hsla(120, 100%, 30%, 0.1);    
-}
-
-.carrito{
-    width: 70px;
-    float: left;
-    align-items: center;
+.bienvenido{
+    text-align: center;
+    margin: 20px;
+    color: rgba(0,0,0, 0.5);
 }
 
 .botones{
@@ -82,43 +35,86 @@ body{
     border-radius: 100px;
     padding: 10px 20px;
     justify-items: center;
-    /* display: flex; */
     justify-content: center;
 }
 
-.agregar{
+.botonDetalle{
+    font-size: 20px;
+    text-decoration: none;
+    justify-items: center;
+    margin: 10px;
+    background-color: rgba(0,0,260,0.8);
+    color: white;
+    border-radius: 100px;
+    padding: 10px 20px;
+    justify-items: center;
     display: flex;
     justify-content: center;
-    align-items: center;
-    margin-bottom: 10px;
 }
 
-.agregar button{
-    border-radius: 100px;
-    font-size: 20px;
-    background-color: #198754;
+.botonDetalle:hover{
     color: white;
 }
+
+.botonCart{
+    font-size: 20px;
+    text-decoration: none;
+    justify-items: center;
+    margin: 10px;
+    background-color: rgba(0,0,260,0.9);
+    color: white;
+    border-radius: 100px;
+    padding: 10px 20px;
+    justify-items: center;
+    justify-content: center;
+}
+
+.categorias{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    font-family: 'Hurricane', cursive;
+    align-items: center;
+}
+
+.categorias li a{
+    text-decoration: none; 
+    color: #ff3434;
+    margin: 10px;
+    font-size: 25px;
+}
+
+.categorias li a:active{
+    background-color: hsla(120, 100%, 30%, 0.1);    
+}
+
+.carrito{
+    width: 25px;
+    float: left;
+    align-items: center;
+    margin: 0px 10px 0px 0px;
+}
+
 .card{
     display: grid;
-    float: left;
+    width: 90%;
+    float: left; 
     margin: 10px;
-    grid-template-columns: 1fr;
-    grid-template-rows: min-content;
     width: 24.5em;
+}
+
+.card-detalle{
+    display: grid;
+    justify-items: center;
 }
 
 .cartwidget{
     display: flex;
     align-items: center;
 }
-.cartwidget b{
-    font-size: 30px;
-}
 
-.card-detalle{
-    display: grid;
-    justify-items: center;
+.cartwidget b{
+    font-size: 25px;
 }
 .cardCarrito{
     object-fit: contain;
@@ -133,46 +129,84 @@ body{
     text-align: center;
     vertical-align: middle;
 }
+
 .checkout p{
     font-size: 40px;
 }
 
-
-.botonDetalle{
-    font-size: 20px;
-    text-decoration: none;
-    justify-items: center;
-    margin: 10px;
-    background-color: rgba(0,0,260,0.9);
-    color: white;
-    border-radius: 100px;
-    padding: 10px 20px;
-    justify-items: center;
+.formulario{
+    background-color: #198754;
+    margin: 10px 500px 10px;
+    border-radius: 5px; 
+    align-items: center;
     display: flex;
-    justify-content: center;
+    flex-basis: 65%;
+    flex-direction: column;
 }
 
-.botonDetalle:hover{
-    color: white;
-}
-.botonCart{
-    font-size: 20px;
-    text-decoration: none;
+.formulario div input{
     justify-items: center;
     margin: 10px;
-    background-color: rgba(0,0,260,0.9);
-    color: white;
-    border-radius: 100px;
-    padding: 10px 20px;
+}
+
+.formulario div label{
     justify-items: center;
-    /* display: flex; */
-    justify-content: center;
+    margin: 0px 0px 0px 10px;
 }
 
 .home{
     background-color: hsla(120, 100%, 30%, 0.1);
+    margin: 0px 200px;
     padding: 5px 20px;
     border-radius: 100px;
+    font-size: 5px;
+}
+
+.items{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+}
+
+.items li a{
+    font-size: 25px;
+    font-family: 'Hurricane', cursive;
+    margin: 10px;
+    display: inline-block;
+    align-items: center;
+    text-decoration: none;  
+    color: #ff3434;
+}
+
+.items li a:active{
+    background-color: hsla(120, 100%, 30%, 0.1);    
+}
+
+.logo{
+    width: 50px;
+    float: left;
+    align-items: center;
+    margin: 0px 200px 0px 10px;
+}
+
+.navbar{
+    background-color: hsla(120, 100%, 30%, 0.3);
+}
+
+.navbar div a{
+    text-decoration: none;
+    font-size: 25px;
+    color: black;
+}
+
+.resumenCarrito{
+    text-align: center;
+}
+.submit{
+    margin: 10px;
+    width: 100px;
+    border: 1px solid ;
 }
 
 

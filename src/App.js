@@ -8,6 +8,7 @@ import Cart from "./components/Cart";
 import CartContextProvider from "./components/CartContext";
 import Form from "./components/Form";
 
+
 export default function App() {
 
   return (
@@ -16,7 +17,7 @@ export default function App() {
         <BrowserRouter>
           <NavBar />
           <Routes>
-            <Route exact path="/form" element={<Form/>} />
+            <Route exact path="/formcheckout" element={<Form/>} />
             <Route exact path="/" element={<ItemListContainer />} />
             <Route exact path="/categorias/:id"element={<ItemListContainer />} />
             <Route exact path="/item/:id" element={<ItemDetailContainer />} />
