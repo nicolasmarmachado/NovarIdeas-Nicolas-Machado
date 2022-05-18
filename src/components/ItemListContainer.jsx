@@ -30,7 +30,10 @@ export default function ItemListContainer() {
     <>
       <h3 className="bienvenido">Bienvenidos a NOVAR Ideas. <br />
         Elija su producto de la tienda aquí abajo</h3>
+
+      <div className="products">
       <ItemList products={products}  />
+      </div>
     </>
   );
 }

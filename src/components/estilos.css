@@ -61,7 +61,7 @@
     text-decoration: none;
     justify-items: center;
     margin: 10px;
-    background-color: rgba(0,0,260,0.9);
+    background-color: rgba(0,0,260,0.8);
     color: white;
     border-radius: 100px;
     padding: 10px 20px;
@@ -198,6 +198,12 @@
     text-decoration: none;
     font-size: 25px;
     color: black;
+}
+
+.products{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: auto;
 }
 
 .resumenCarrito{
