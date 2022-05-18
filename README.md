@@ -5,12 +5,15 @@
 Este proyecto fue realizado para el proyecto final del curso de React en CoderHouse. 
 
 ## Demo
+
 ![](NovarIdeas.gif)
 
 ## Objetivo
+
 Diseñar una tienda eCommerce con React, aprendido en el curso de Coder House.
 
 ## Características
+
 Obtener productos obtenidos de Firebase
 Realizar una compra y enviar los datos del comprador a la base de datos Firebase.
 Filtros por categorías.
@@ -31,6 +34,8 @@ Se utilizaron estilos CSS para el diseño general del sitio.
 Proyecto conectado a la base de datos de Firebase v9.6.11
 
 ### Deploy en: 
+
+https://camada-31140-d2156.web.app
 
 ### Proyecto creado por Nicolás Machado para CODERHOUSE
 
