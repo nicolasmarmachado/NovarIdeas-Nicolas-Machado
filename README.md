@@ -30,7 +30,7 @@ Se utilizaron estilos CSS para el diseño general del sitio.
 
 Proyecto conectado a la base de datos de Firebase v9.6.11
 
-### deployado en..
+### Deploy en: 
 
 ### Proyecto creado por Nicolás Machado para CODERHOUSE
 
